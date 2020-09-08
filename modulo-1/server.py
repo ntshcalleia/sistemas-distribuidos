@@ -3,12 +3,12 @@ import argparse, socket
 # Add named command line arguments
 parser = argparse.ArgumentParser()
 parser.add_argument('--HOST', help='change the server host (default is localhost)')
-parser.add_argument('--PORT', help='change the port (default is 5000)')
+parser.add_argument('--PORT', help='change the port (default is 5000)', type=int)
 
 args = parser.parse_args()
 
 HOST = args.HOST or 'localhost'
-PORT = int(args.PORT) or 5000
+PORT = args.PORT or 5000
 
 # Console colors
 CYAN = '\x1b[36m'
