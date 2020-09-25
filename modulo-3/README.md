@@ -11,6 +11,8 @@ A aplicação é uma aplicação distribuída baseada em arquitetura de sistema 
 - O lado do cliente implementa a camada de interface com o usuário, que pode solicitar o processamento de vários arquivos em uma única execução da aplicação
 - O servidor implementa as camadas de processamento e de acesso aos dados.
 
+O servidor é capaz de reconhecer comandos básicos da entrada padrão.
+
 ## Instruções de uso
 O cliente está localizado unicamente no arquivo `client.py`, enquanto que os demais arquivos pertencem ao servidor.
 ### Servidor
@@ -23,6 +25,8 @@ O host e porta padrões são localhost e 5000, mas podem ser alterados usando as
 ```bash
 python3 server.py --PORT 5001 --HOST '192.168.0.5'
 ```
+#### Encerrando o servidor
+O servidor pode ser encerrado a qualquer momento digitando o comando `/exit`.
 #### Banco de dados
 A aplicação busca por arquivos salvos na pasta `database` do servidor, mas caso ele esteja localizado em outra pasta você pode consultá-lo indicando o diretório do mesmo na chamada.
 O servidor irá inicialmente consultar `cache.json`, pois caso o arquivo desejado já tenha sido consultado o resultado estará armazenado no mesmo. Se for a primeira consulta o servidor irá processar o arquivo e registrar as informações no arquivo cache.
