@@ -18,14 +18,15 @@ GREEN = '\x1b[32m'
 RED = '\x1b[31m'
 RESET = '\x1b[0m'
 
-while True:
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    s.connect((HOST, PORT))
+    while True:
         try:
             files = args.files if not args.i else input(f'{CYAN}Enter filename(s):\n{RESET}').split()
             if files[0] == "/exit":
                 print(f'{CYAN}Exiting interactive mode.{RESET}')
+                s.close()
                 break
-            s.connect((HOST, PORT))
             msg = json.dumps(files)
             s.send(msg.encode())
             response = json.loads(s.recv(1024))
@@ -36,4 +37,5 @@ while True:
             print(RED + "Unable to connect to server." + RESET)
             break
         if not args.i:
+            s.close()
             break

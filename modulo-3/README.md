@@ -11,7 +11,8 @@ A aplicação é uma aplicação distribuída baseada em arquitetura de sistema 
 - O lado do cliente implementa a camada de interface com o usuário, que pode solicitar o processamento de vários arquivos em uma única execução da aplicação
 - O servidor implementa as camadas de processamento e de acesso aos dados.
 
-O servidor é capaz de reconhecer comandos básicos da entrada padrão.
+O servidor é capaz de reconhecer comandos básicos da entrada padrão. Além disso o servidor é concorrente, ou seja, ele cria novos fluxos
+de execução para atender várias conexões simultaneamente.
 
 ## Instruções de uso
 O cliente está localizado unicamente no arquivo `client.py`, enquanto que os demais arquivos pertencem ao servidor.
