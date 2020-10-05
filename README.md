@@ -14,7 +14,7 @@ Os trabalhos serão divididos por módulo e cada módulo terá sua própria past
 - [**Módulo 1:** introdução ao estudo de sistemas distribuídos](/modulo-1/)
 - [**Módulo 2:** arquiteturas de sistemas distribuídos (de software e de sistema)](/modulo-2/)
 - [**Módulo 3:** processos e threads em sistemas distribuídos](/modulo-3/)
-- **Módulo 4:** comunicação em sistemas distribuídos
+- [**Módulo 4:** comunicação em sistemas distribuídos](/modulo-4/)
 - **Módulo 5:** identificação e localização em sistemas distribuídos
 - **Módulo 6:** coordenação e sincronização de processos em sistemas distribuídos
 - **Módulo 7:** consistência e replicação em sistemas distribuídos
